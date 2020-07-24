@@ -1,13 +1,20 @@
-y = int(input("Enter a Year: "))
+Year = int(input("Enter the year: "))
+Month = int(input("Enter the month(1-12) :" ))
+Day = int(input("Enter the day: "))
+if Year % 400 == 0:
+    leap = True
+elif Year % 100 ==0:
+    leap = False
+elif Year % 4 ==0:
+    leap = True
+else :
+    leap = False
 
-# Leap Year Check
-
-
-if y % 400 == 0:
-    print(y, "is a Leap Year")
-elif y % 100 == 0:
-    print(y, "is not a Leap Year")
-elif y % 4 == 0:
-    print(y, "is a Leap Year")
-else:
-    print(y, "is not a Leap Year")
+months = [31,28,31,30,31,30,31,31,30,30,30,31]
+if leap == True :
+    months[1] = 29
+m=0
+for i in range(1,Month):
+    m += months[i] 
+dayofyear = m + Day
+print("Today is ",dayofyear ," day of the year")
