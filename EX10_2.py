@@ -30,7 +30,7 @@ if np.min(sax1)==np.max(sax1)== np.min(sax2)==np.max(sax2)==sdia==sodia :
 M=np.random.rand(10,10)
 print('10*10 matrix filled with random values:\n',M)
 MUL=M[:5,:5]
-MUR=M[5:10,:5]
-MLL=M[:5,5:10]
+MUR=M[:5,5:10]
+MLL=M[5:10,:5]
 MLR=M[5:10,5:10]
 
